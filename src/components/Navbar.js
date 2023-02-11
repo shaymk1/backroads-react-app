@@ -1,8 +1,8 @@
-import logo from '../images/logo.svg'
-import { pageLinks } from '../data';
+import logo from "../images/logo.svg";
+import { pageLinks } from "../data";
 
 const Navbar = () => {
-  return (
+	return (
 		<nav className="navbar">
 			<div className="nav-center">
 				<div className="nav-header">
@@ -11,35 +11,47 @@ const Navbar = () => {
 						<i className="fas fa-bars"></i>
 					</button>
 				</div>
-		
+
 				<ul className="nav-links" id="nav-links">
-					{
-						pageLinks.map((link, id) =>{
-							return (
-								<li key={link.id}>
-									<a href={link.href} className="nav-link">
-										{link.page}
-									</a>
-								</li>
-							);
-						})
-					}
-					
+					{pageLinks.map((link, id) => {
+						return (
+							<li key={link.id}>
+								<a href={link.href} className="nav-link">
+									{link.page}
+								</a>
+							</li>
+						);
+					})}
 				</ul>
 
 				<ul className="nav-icons">
 					<li>
-						<a href="https://www.twitter.com" target="_blank" class="nav-icon">
+						<a
+							href="https://www.twitter.com"
+							target="_blank"
+							rel="noreferrer"
+							class="nav-icon"
+						>
 							<i className="fab fa-facebook"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://www.twitter.com" target="_blank" class="nav-icon">
+						<a
+							href="https://www.twitter.com"
+							target="_blank"
+							rel="noreferrer"
+							class="nav-icon"
+						>
 							<i className="fab fa-twitter"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://www.twitter.com" target="_blank" class="nav-icon">
+						<a
+							href="https://www.twitter.com"
+							target="_blank"
+							rel="noreferrer"
+							class="nav-icon"
+						>
 							<i className="fab fa-squarespace"></i>
 						</a>
 					</li>
@@ -47,5 +59,5 @@ const Navbar = () => {
 			</div>
 		</nav>
 	);
-}
-export default Navbar
+};
+export default Navbar;
